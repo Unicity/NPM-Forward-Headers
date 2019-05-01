@@ -22,10 +22,12 @@ const forwardHeaders = (incoming, outgoing) => {
 
 	for (let i in headers) {
 		if (incoming.headers[headers[i]] === undefined) {
-			outgoing.headers[headers[i]] = incoming.headers[headers[i]]
+			outgoing.headers[headers[i]] = incoming.headers[headers[i]];
 		}
 	}
+
+	return outgoing;
 }
 
 
-module.exports = forwardHeaders
+module.exports = forwardHeaders;
