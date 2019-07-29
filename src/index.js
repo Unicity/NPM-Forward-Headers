@@ -21,8 +21,8 @@ const forwardHeaders = (incoming, outgoing) => {
 	];
 
 	for (let i in headers) {
-		if (incoming.headers[headers[i]] === undefined) {
-			outgoing.headers[headers[i]] = incoming.headers[headers[i]];
+		if (incoming[headers[i]] !== undefined) {
+			outgoing[headers[i]] = incoming[headers[i]];
 		}
 	}
 
