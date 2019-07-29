@@ -35,7 +35,7 @@ const forwardHeaders = (rawIncoming, rawOutgoing) => {
 	}
 
 	for (let i in headers) {
-		if (incoming[headers[i]] === undefined) {
+		if (incoming[headers[i]] !== undefined) {
 			outgoing[headers[i]] = incoming[headers[i]];
 		}
 	}
