@@ -28,7 +28,7 @@ const forwardHeaders = (rawIncoming, rawOutgoing) => {
 	}
 
 	// Lowercase all outgoing headers
-	const incoming = {};
+	const outgoing = {};
 
 	for (let i in rawOutgoing) {
 		outgoing[String(i).toLowerCase()] = rawOutgoing[i];
